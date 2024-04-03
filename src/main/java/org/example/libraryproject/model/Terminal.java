@@ -6,8 +6,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jdk.jfr.Unsigned;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,4 +19,5 @@ public class Terminal {
     private Integer id;
     private String name;
     private String location;
+    private TerminalType terminalType;
 }

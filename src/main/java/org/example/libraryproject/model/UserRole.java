@@ -1,6 +1,6 @@
 package org.example.libraryproject.model;
 
-public enum UserType {
+public enum UserRole {
     EMPLOYEE,
     REGULAR
 }
