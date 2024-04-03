@@ -6,3 +6,4 @@
   To be able to use a terminal, a subscriber must log in. 
   After logging in, he sees the list of copies available at that moment and can borrow one or more. For the return of books, there is only one working point, served by a librarian. 
   After each loan/return, all library terminal users see the updated list of available books.
+<img width="1105" alt="UseCasesDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/cccfee13-2fba-4c4a-b74b-2e427cac4174">
