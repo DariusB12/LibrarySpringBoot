@@ -8,7 +8,7 @@
   After each loan/return, all library terminal users see the updated list of available books.
 
 # Model UML Diagram
-<img width="911" alt="ModelDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/974b3100-7fea-4940-8026-e60742ac971a">
+<img width="915" alt="ModelDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/a859ca65-736d-4014-9f71-aa1c442c68e3">
 
 # UseCases UML Diagram
 <img width="1105" alt="UseCasesDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/b9618608-2cc6-405c-8d7e-7d29559326d2">
@@ -20,3 +20,6 @@
   UseCases - 6,7,9
 3. ReturnBooks + Penalizations + Cancel Appointment + confirm Return Appointment + confirm Other Appointments\
   UseCases - 8,10
+
+## UseCases Scenarios with Alternative flows and Exceptions:
+[Use Cases.docx](https://github.com/DariusB12/LibrarySpringBoot/files/14854824/Use.Cases.docx)
