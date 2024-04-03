@@ -6,7 +6,8 @@
   To be able to use a terminal, a subscriber must log in. 
   After logging in, he sees the list of copies available at that moment and can borrow one or more. For the return of books, there is only one working point, served by a librarian. 
   After each loan/return, all library terminal users see the updated list of available books.
-
+# The project stage
+For the time being I implemented the SignIn and SignUp functionalities using JWT authentication.
 # Model UML Diagram
 <img width="915" alt="ModelDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/a859ca65-736d-4014-9f71-aa1c442c68e3">
 
@@ -22,4 +23,12 @@
   UseCases - 8,10
 
 ## UseCases Scenarios with Alternative flows and Exceptions:
-[Use Cases.docx](https://github.com/DariusB12/LibrarySpringBoot/files/14854824/Use.Cases.docx)
+[Use Cases 2.pdf](https://github.com/DariusB12/LibrarySpringBoot/files/14855176/Use.Cases.2.pdf)
+
+# Technologies Used
+1. PostgreSQL for the data base connection
+2. SpringBoot framework
+3. Spring security
+4. Jwt security for authentication
+5. Lombok dependency to make it easier to manipulate the entities
+6. Postman app in order to send requests to my app
