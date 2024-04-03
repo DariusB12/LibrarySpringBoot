@@ -8,6 +8,14 @@
   After each loan/return, all library terminal users see the updated list of available books.
 # The project stage
 For the time being I implemented the SignIn and SignUp functionalities using JWT authentication.
+# Technologies Used
+1. PostgreSQL for the data base connection
+2. SpringBoot framework
+3. Spring security
+4. Jwt security for authentication
+5. Lombok dependency to make it easier to manipulate the entities
+6. Postman app in order to send requests to my app
+   
 # Model UML Diagram
 <img width="915" alt="ModelDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/a859ca65-736d-4014-9f71-aa1c442c68e3">
 
@@ -24,11 +32,3 @@ For the time being I implemented the SignIn and SignUp functionalities using JWT
 
 ## UseCases Scenarios with Alternative flows and Exceptions:
 [Use Cases 2.pdf](https://github.com/DariusB12/LibrarySpringBoot/files/14855176/Use.Cases.2.pdf)
-
-# Technologies Used
-1. PostgreSQL for the data base connection
-2. SpringBoot framework
-3. Spring security
-4. Jwt security for authentication
-5. Lombok dependency to make it easier to manipulate the entities
-6. Postman app in order to send requests to my app
