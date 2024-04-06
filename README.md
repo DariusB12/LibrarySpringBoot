@@ -15,6 +15,12 @@ For the time being I implemented the SignIn and SignUp functionalities using JWT
 4. Jwt security for authentication
 5. Lombok dependency to make it easier to manipulate the entities
 6. Postman app in order to send requests to my app
+
+# Problems I faced:
+  1. I had to add in the dependency section of gradle.build the lombok annotationProcessor because some lombok annotations were not handled during compilation time and this is the main reason why I could not compile my app.
+  2. I had to disable the csrf for http requests, because when i wanted to make a request that changed the state (ex: POST), the application expected a csrf Token from this request, but i do not need this feature because I use JWT authentication.
+
+
    
 # Model UML Diagram
 <img width="915" alt="ModelDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/a859ca65-736d-4014-9f71-aa1c442c68e3">
