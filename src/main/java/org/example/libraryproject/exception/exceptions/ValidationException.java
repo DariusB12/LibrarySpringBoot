@@ -1,4 +1,4 @@
-package org.example.libraryproject.exception;
+package org.example.libraryproject.exception.exceptions;
 
 public class ValidationException extends Exception{
     public ValidationException() {

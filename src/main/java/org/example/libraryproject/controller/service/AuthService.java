@@ -1,14 +1,13 @@
-package org.example.libraryproject.controller;
+package org.example.libraryproject.controller.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.libraryproject.config.JwtService;
-import org.example.libraryproject.controller.dto.AuthenticationResponse;
-import org.example.libraryproject.controller.dto.SignInRequest;
-import org.example.libraryproject.controller.dto.SignUpRequest;
-import org.example.libraryproject.exception.AuthServiceException;
-import org.example.libraryproject.exception.ValidationException;
+import org.example.libraryproject.controller.authenticationDTO.AuthenticationResponse;
+import org.example.libraryproject.controller.authenticationDTO.SignInRequest;
+import org.example.libraryproject.controller.authenticationDTO.SignUpRequest;
+import org.example.libraryproject.exception.exceptions.AuthServiceException;
+import org.example.libraryproject.exception.exceptions.ValidationException;
 import org.example.libraryproject.model.User;
-import org.example.libraryproject.model.UserRole;
 import org.example.libraryproject.repository.UserRepository;
 import org.example.libraryproject.validator.IValidator;
 import org.example.libraryproject.validator.UserValidator;
@@ -54,7 +53,7 @@ public class AuthService {
                 .cnp(request.getCnp())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .createdAt(LocalDateTime.now())
-                .userRole(UserRole.REGULAR)
+                .userRole(request.getRole())
                 .build();
         //validate the user before saving it
         userValidator.validate(user);

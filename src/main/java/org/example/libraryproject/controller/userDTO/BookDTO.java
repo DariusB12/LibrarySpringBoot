@@ -1,23 +1,18 @@
-package org.example.libraryproject.model;
+package org.example.libraryproject.controller.userDTO;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 import java.time.LocalDate;
 
 @Data
 @Builder
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class BookDTO {
     private String title;
     private String author;
     private String publisher;
@@ -25,7 +20,5 @@ public class Book {
     private Integer pages;
     private String description;
     private String imagePath;
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id",foreignKey = @ForeignKey(name = "fk_user"))
-    private User user;
+    private Integer booksAvailable;
 }

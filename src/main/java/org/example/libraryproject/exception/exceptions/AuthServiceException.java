@@ -1,4 +1,4 @@
-package org.example.libraryproject.exception;
+package org.example.libraryproject.exception.exceptions;
 
 public class AuthServiceException extends Exception{
     public AuthServiceException() {

@@ -1,4 +1,4 @@
-package org.example.libraryproject.controller.dto;
+package org.example.libraryproject.controller.authenticationDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -13,5 +13,4 @@ import lombok.NoArgsConstructor;
 public class AuthenticationResponse {
     @JsonProperty("token")
     private String token;
-
 }

@@ -1,6 +1,6 @@
 package org.example.libraryproject.validator;
 
-import org.example.libraryproject.exception.ValidationException;
+import org.example.libraryproject.exception.exceptions.ValidationException;
 import org.example.libraryproject.model.User;
 
 import java.util.Objects;
