@@ -29,7 +29,7 @@ For the time being I implemented the SignIn and SignUp functionalities using JWT
 <img width="1105" alt="UseCasesDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/b9618608-2cc6-405c-8d7e-7d29559326d2">
 
 # I divided the problem into 3 iterations
-1. Sign IN/UP/OUT/Delete Account/Forgot Password + JWT Authentication + Initialize Graphical Interface + Data Base connection + Show Books\
+1. Sign IN/UP/Delete Account/Forgot Password + JWT Authentication + Initialize Graphical Interface + Data Base connection + Show Books\
   UseCases - 1,2,3,4,5
 2. BorrowBooks + Penalizations + Cancel Appointment + Reactivate Account + confirm Borrow Appointment\
   UseCases - 6,7,9
