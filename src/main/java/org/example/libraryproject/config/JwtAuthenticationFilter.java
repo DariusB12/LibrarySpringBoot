@@ -66,7 +66,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
             filterChain.doFilter(request, response);
         } catch (Exception e) {
-            System.out.println("entered the catch block - Validation error");
+//            System.out.println("entered the catch block - Validation error");
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             exceptionResolver.resolveException(request, response, null, e);
         }
