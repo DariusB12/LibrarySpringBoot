@@ -25,7 +25,7 @@ For the time being I implemented the iteration 1.
 3. Spring security
 4. JWT security for authentication
 5. Lombok dependency to make it easier to manipulate the entities
-6. JavaFX (in the repository LibraryJavaFX)
+6. JavaFX (implementation found in the repository named LibraryJavaFX)
 
 # Problems I faced:
   1. I had to add in the dependency section of gradle.build the lombok annotationProcessor because some lombok annotations were not handled during compilation time and this is the main reason why I could not compile my app.
