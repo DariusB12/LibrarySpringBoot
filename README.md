@@ -7,7 +7,7 @@
   After logging in, he see the list of books available at that moment and can borrow one or more.  (in order to borrow or return a book the user makes an appointment and if not pressent at the appointment (without canceling it) he gets a penalization)\
   Upon reaching a certain number of penalty points, the user's account becomes DEACTIVATED, so they must physically go to the library to reactivate their account.\
   For the return of books, there is only one terminal, served by a librarian(EMPLOYEE users). \
-  After each loan/return, all the users see the updated list of available books.\
+  After each loan/return, all the users see the updated list of available books.
 
 # I divided the problem into 3 iterations 
 1. Sign IN/UP/Delete Account+ JWT Authentication + Initialize Graphical Interface + Data Base connection + Show Books\
