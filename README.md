@@ -1,13 +1,13 @@
 # LibrarySpringBoot
 # Requirement:
-  A library offers its subscribers a list of books that can be borrowed.
-  Each book can exist in one or more copies, identified by unique codes(id). 
-  The library has several terminals where subscribers(REGULAR uses) can borrow books. 
-  To be able to use a terminal, a subscriber must log in. 
-  After logging in, he see the list of books available at that moment and can borrow one or more.  (in order to borrow or return a book the user makes an appointment and if not pressent at the appointment (without canceling it) he gets a penalization)
-  Upon reaching a certain number of penalty points, the user's account becomes DEACTIVATED, so they must physically go to the library to reactivate their account.
-  For the return of books, there is only one terminal, served by a librarian(EMPLOYEE users). 
-  After each loan/return, all the users see the updated list of available books.
+  A library offers its subscribers a list of books that can be borrowed.\
+  Each book can exist in one or more copies, identified by unique codes(id). \
+  The library has several terminals where subscribers(REGULAR uses) can borrow books. \
+  To be able to use a terminal, a subscriber must log in. \
+  After logging in, he see the list of books available at that moment and can borrow one or more.  (in order to borrow or return a book the user makes an appointment and if not pressent at the appointment (without canceling it) he gets a penalization)\
+  Upon reaching a certain number of penalty points, the user's account becomes DEACTIVATED, so they must physically go to the library to reactivate their account.\
+  For the return of books, there is only one terminal, served by a librarian(EMPLOYEE users). \
+  After each loan/return, all the users see the updated list of available books.\
 
 # I divided the problem into 3 iterations 
 1. Sign IN/UP/Delete Account+ JWT Authentication + Initialize Graphical Interface + Data Base connection + Show Books\
