@@ -19,7 +19,7 @@ UC - 1,2,3 #DONE
 
 # The project stage
 For the time being I implemented the iteration 1.
-# Technologies Used
+# Technologies Used (for the SpringBoot Project)
 1. PostgreSQL for the data base connection
 2. SpringBoot framework
 3. Spring security
