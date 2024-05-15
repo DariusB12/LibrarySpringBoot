@@ -1,7 +1,10 @@
 package org.example.libraryproject.exception;
 
+import com.sun.jdi.InternalException;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.security.SignatureException;
+import org.example.libraryproject.exception.exceptions.AuthServiceException;
+import org.example.libraryproject.exception.exceptions.InternalServerException;
 import org.example.libraryproject.exception.exceptions.UserServiceException;
 import org.example.libraryproject.exception.exceptions.ValidationException;
 import org.springframework.core.annotation.Order;
@@ -13,7 +16,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @Order(1)
 @ControllerAdvice
 public class CustomExceptionHandler {
@@ -23,7 +29,7 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(400)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
@@ -35,7 +41,7 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(401)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
@@ -47,7 +53,7 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(401)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
@@ -59,7 +65,7 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(400)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
@@ -73,7 +79,7 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(401)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
@@ -86,7 +92,7 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(409)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
@@ -99,10 +105,35 @@ public class CustomExceptionHandler {
 
         errorObject = ErrorObject.builder()
                 .statusCode(400)
-                .dateTime(LocalDateTime.now())
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
                 .message(ex.getMessage())
                 .build();
 
         return new ResponseEntity<ErrorObject>(errorObject, HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(InternalServerException.class)
+    public ResponseEntity<ErrorObject> handleInternalServerException(Exception ex) {
+        ErrorObject errorObject;
+
+        errorObject = ErrorObject.builder()
+                .statusCode(500)
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
+                .message(ex.getMessage())
+                .build();
+
+        return new ResponseEntity<ErrorObject>(errorObject, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(AuthServiceException.class)
+    public ResponseEntity<ErrorObject> handleAuthServiceException(Exception ex) {
+        ErrorObject errorObject;
+
+        errorObject = ErrorObject.builder()
+                .statusCode(401)
+                .dateTime(LocalDateTime.parse(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))))
+                .message(ex.getMessage())
+                .build();
+
+        return new ResponseEntity<ErrorObject>(errorObject, HttpStatus.UNAUTHORIZED);
     }
 }

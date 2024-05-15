@@ -1,4 +1,4 @@
-package org.example.libraryproject.controller.userDTO;
+package org.example.libraryproject.controller.dto.regularDTO;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.libraryproject.model.Book;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserResponse {
+public class RegularResponse {
     @JsonProperty("message")
     private String message;
     @JsonProperty("books")

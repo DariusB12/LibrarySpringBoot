@@ -1,4 +1,4 @@
-package org.example.libraryproject.controller.userDTO;
+package org.example.libraryproject.controller.dto.regularDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserRequest {
+public class RegularRequest {
     @JsonProperty("password")
     private String password;
 }

@@ -1,6 +1,5 @@
-package org.example.libraryproject.controller.userDTO;
+package org.example.libraryproject.controller.dto.regularDTO;
 
-import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

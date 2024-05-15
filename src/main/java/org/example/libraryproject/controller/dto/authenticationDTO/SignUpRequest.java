@@ -1,4 +1,4 @@
-package org.example.libraryproject.controller.authenticationDTO;
+package org.example.libraryproject.controller.dto.authenticationDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -30,4 +30,6 @@ public class SignUpRequest {
     private String email;
     @JsonProperty("role")
     private UserRole role;
+    @JsonProperty("role password")
+    private String rolePassword;
 }

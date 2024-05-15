@@ -1,15 +1,13 @@
 package org.example.libraryproject.controller.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.libraryproject.controller.userDTO.BookDTO;
-import org.example.libraryproject.controller.userDTO.UserRequest;
-import org.example.libraryproject.controller.userDTO.UserResponse;
+import org.example.libraryproject.controller.dto.regularDTO.BookDTO;
+import org.example.libraryproject.controller.dto.regularDTO.RegularRequest;
+import org.example.libraryproject.controller.dto.regularDTO.RegularResponse;
 import org.example.libraryproject.exception.exceptions.UserServiceException;
-import org.example.libraryproject.model.Book;
 import org.example.libraryproject.model.User;
 import org.example.libraryproject.repository.BookRepository;
 import org.example.libraryproject.repository.UserRepository;
-import org.springframework.cglib.core.Local;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -21,7 +19,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class RegularService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final BookRepository bookRepository;
@@ -30,11 +28,11 @@ public class UserService {
         Verify the validity of the password of the user
         If valid, then delete the user account
      */
-    public UserResponse deleteAccount(UserRequest request) throws UserServiceException {
+    public RegularResponse deleteAccount(RegularRequest request) throws UserServiceException {
         User user = getCurrentUser();
         if(request.getPassword() != null && passwordMatch(request.getPassword(),user.getPassword())){
             userRepository.delete(user);
-            return UserResponse.builder().message("account deleted").build();
+            return RegularResponse.builder().message("account deleted").build();
         }else{
             throw new UserServiceException("wrong credentials");
         }
@@ -53,11 +51,11 @@ public class UserService {
     }
 
     /***
-     * Returns a UserResponse which contains all the distinct books (BookDTO)
+     * Returns a RegularResponse which contains all the distinct books (BookDTO)
      */
-    public UserResponse getAllBooks() {
+    public RegularResponse getAllBooks() {
         List<Object[]> resultList = bookRepository.findDistinctBooksWithCount();
-        return UserResponse.builder()
+        return RegularResponse.builder()
                 .books(convertBookListToDto(resultList))
                 .build();
     }
