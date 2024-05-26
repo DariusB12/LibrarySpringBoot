@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.libraryproject.model.Appointment;
+import org.example.libraryproject.model.Terminal;
 
 import java.util.List;
 
@@ -18,4 +20,8 @@ public class RegularResponse {
     private String message;
     @JsonProperty("books")
     private List<BookDTO> books;
+    @JsonProperty("terminals")
+    private List<TerminalDTO> terminals;
+    @JsonProperty("appointments")
+    private List<AppointmentDTO> appointments;
 }

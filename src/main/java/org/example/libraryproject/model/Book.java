@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Builder
@@ -28,4 +29,6 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id",foreignKey = @ForeignKey(name = "fk_user"))
     private User user;
+    @OneToMany(mappedBy = "book")
+    private List<Appointment> appointments;
 }

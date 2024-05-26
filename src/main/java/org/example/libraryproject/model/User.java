@@ -48,11 +48,11 @@ public class User implements UserDetails {
 
     private UserRole userRole;
 
-    private AccountState accountState;
-
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Book> borrowedBooks;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private List<Appointment> appointments;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

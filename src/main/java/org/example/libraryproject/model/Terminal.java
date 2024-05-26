@@ -1,16 +1,17 @@
 package org.example.libraryproject.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jdk.jfr.Unsigned;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Terminal {
@@ -20,4 +21,7 @@ public class Terminal {
     private String name;
     private String location;
     private TerminalType terminalType;
+
+    @OneToMany(mappedBy = "terminal", fetch = FetchType.LAZY)
+    private List<Appointment> appointments;
 }

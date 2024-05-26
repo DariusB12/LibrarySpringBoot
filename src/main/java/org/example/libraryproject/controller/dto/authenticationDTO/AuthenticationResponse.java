@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.libraryproject.model.AccountState;
 import org.example.libraryproject.model.UserRole;
 
 @Data
@@ -17,8 +16,6 @@ public class AuthenticationResponse {
     private String token;
     @JsonProperty("username")
     private String username;
-    @JsonProperty("user role")
+    @JsonProperty("user_role")
     private UserRole userRole;
-    @JsonProperty("account state")
-    private AccountState accountState;
 }

@@ -30,6 +30,6 @@ public class SignUpRequest {
     private String email;
     @JsonProperty("role")
     private UserRole role;
-    @JsonProperty("role password")
+    @JsonProperty("role_password")
     private String rolePassword;
 }
