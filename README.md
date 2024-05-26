@@ -24,7 +24,7 @@ UC- 4,7,8  #DONE
 5. JWT security for authentication
 6. Lombok dependency to make it easier to manipulate the entities
 7. JavaFX
-8. SSE (Server-Sent Events)
+8. SSE (Server-Sent Events) - in order to send updates to clients
    
 # Problems I faced:
   1. I had to add, in the dependency section of gradle.build, the lombok annotationProcessor because some lombok annotations were not handled during compilation time and this is the main reason why I could not compile my app.
