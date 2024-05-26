@@ -25,7 +25,10 @@ UC- 4,7,8  #DONE
 6. Lombok dependency to make it easier to manipulate the entities
 7. JavaFX
 8. SSE (Server-Sent Events) - in order to send updates to clients
-   
+
+# Client JavaFX project repository link
+[Link Client JavaFX App](https://github.com/DariusB12/LibraryJavaFX)
+
 # Problems I faced:
   1. I had to add, in the dependency section of gradle.build, the lombok annotationProcessor because some lombok annotations were not handled during compilation time and this is the main reason why I could not compile my app.
   2. I had to disable the csrf for http requests, because when I wanted to make a request that changed the state (ex: POST), the application expected a csrf Token from this request, but i did not need this feature because I use JWT authentication.
@@ -36,6 +39,3 @@ UC- 4,7,8  #DONE
 
 # UseCases UML Diagram
 <img width="981" alt="UseCasesDiagram" src="https://github.com/DariusB12/LibrarySpringBoot/assets/131203165/d381ee5d-a745-43c3-91fa-dd01b012dcd2">
-
-# Client JavaFX project repository link
-[Link Client JavaFX App](https://github.com/DariusB12/LibraryJavaFX)
